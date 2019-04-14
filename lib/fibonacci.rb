@@ -15,10 +15,8 @@ def fibonacci(n)
 
   if !n || n < 0
     raise ArgumentError, "Must be an integer greater than zero"
-  elsif n == 0
-    return first
-  elsif n == 1
-    return second
+  elsif n < 2
+    return n
   else
     (n - 1).times do
       result = first + second
